@@ -1,12 +1,13 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import { StyledFooter } from "./styled";
+
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <StyledFooter>
       <p> &copy; Software Powered by Xtrategie</p>
       <p>2009-2021</p>
-    </footer>
+    </StyledFooter>
   );
 };
 

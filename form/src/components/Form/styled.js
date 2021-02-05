@@ -4,21 +4,25 @@ import InputLabel from "@material-ui/core/InputLabel";
 
 export const StyledButton = styled(Button)
 `
-  background-color: #fff;
-  border: 1px solid #6cb3b7;
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #6cb3b7;
+  && {
+    background-color: #fff;
+    border: 1px solid #6cb3b7;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #6cb3b7;
 
-  &:hover {
-    background-color: #6cb3b7;
-    color: #fff;
+    &:hover {
+      background-color: #6cb3b7;
+      color: #fff;
+    }
   }
 `;
 
 export const StyledInputLabel = styled(InputLabel)
 `
-  color: #6cb3b7;
+  && {
+    color: #6cb3b7;
+  }
 `;
 
 export const StyledConteiner = styled.div `
@@ -31,13 +35,14 @@ export const StyledConteiner = styled.div `
   border: 1px solid #ccc;
   width: 80%;
   height: 30rem;
-  margin: 10rem auto;
+  margin: 4.5rem auto;
   padding: 5rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     width: 80%;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 2rem auto;
   }
 `;
 

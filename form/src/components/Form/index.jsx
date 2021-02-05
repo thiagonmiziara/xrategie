@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
-import {StyledBorder, StyledButton, StyledConteiner, StyledInputLabel, StyledSection} from "./styled"
-import {
-  
-  FormControl,
-  InputAdornment,
-  Input,
-  IconButton,
-  
-} from "@material-ui/core";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
+import FormControl from "@material-ui/core/FormControl";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import Input from "@material-ui/core/Input";
+import IconButton from "@material-ui/core/IconButton";
 import Img from "../Img";
-
-
+import { useForm, Controller } from "react-hook-form";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
+import {
+  StyledBorder,
+  StyledButton,
+  StyledConteiner,
+  StyledInputLabel,
+  StyledSection,
+} from "./styled";
 
 const Form = () => {
   const { handleSubmit, control } = useForm();
@@ -47,6 +47,7 @@ const Form = () => {
               control={control}
               defaultValue=""
               className="materialUIInput"
+              required={true}
             />
           </FormControl>
 
@@ -54,6 +55,7 @@ const Form = () => {
             <StyledInputLabel htmlFor="standard-adornment-password">
               Senha
             </StyledInputLabel>
+
             <Controller
               name="password"
               defaultValue=""
@@ -61,7 +63,8 @@ const Form = () => {
               render={(props) => (
                 <Input
                   {...props}
-                  id="standard-basic"
+                  required={true}
+                  id="filled-basic"
                   type={showPassword ? "text" : "password"}
                   value={props.value}
                   onChange={(e) => props.onChange(e.target.value)}

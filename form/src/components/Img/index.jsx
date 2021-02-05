@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Img.module.css";
+import { StyledImg } from "./styled";
+
 
 const Img = () => {
   return (
-    <img
-      className={styles.img}
+    <StyledImg
       src="https://www.xtrategie.com.br/wp-content/uploads/2019/08/logo_xtrategie.png"
       alt="Logo"
     />
