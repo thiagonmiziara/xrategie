@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import styles from "./Form.module.css";
-import {StyledButton, StyledInputLabel} from "./styled"
+import {StyledBorder, StyledButton, StyledConteiner, StyledInputLabel, StyledSection} from "./styled"
 import {
   
   FormControl,
   InputAdornment,
-  InputLabel,
   Input,
   IconButton,
   
@@ -33,12 +31,12 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className={styles.container}>
-        <div className={styles.border}>
+      <StyledConteiner>
+        <StyledBorder>
           <Img />
-        </div>
+        </StyledBorder>
 
-        <div className={styles.form}>
+        <StyledSection>
           <FormControl>
             <StyledInputLabel htmlFor="standard-adornment-password">
               Email
@@ -88,8 +86,8 @@ const Form = () => {
               ENTRAR
             </StyledButton>
           </FormControl>
-        </div>
-      </div>
+        </StyledSection>
+      </StyledConteiner>
     </form>
   );
 };
